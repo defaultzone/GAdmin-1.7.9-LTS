@@ -44,13 +44,13 @@
 @import "game.User"      => user
 @import "game.Spectator" => spectator
 
-@define GADMIN_VERSION  "1.7.9"
+@define GADMIN_VERSION  "1.7.9-LTS"
 @define SACHESS_VERSION "1.1"
 
 @define COMMAND_DELAY       800
-@define THEMES_URL          "https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/Themes.xml"
-@define AUTOUPDATE_URL      "https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/AutoUpdate.xml"
-@define NICKNAME_COLORS_URL "https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/nickname-colors.conf"
+@define THEMES_URL          "https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/Themes.xml"
+@define AUTOUPDATE_URL      "https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/AutoUpdate.xml"
+@define NICKNAME_COLORS_URL "https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/nickname-colors.conf"
 
 @define SAMP_BASE                       getModuleHandle("samp.dll")
 @define RECALL_UP_ADDR                  $SAMP_BASE + 0x65990
