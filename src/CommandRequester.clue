@@ -147,7 +147,7 @@ method __commandRequester__::setupChatWatcher(text, color) {
         }
     }
 
-    if local id, command = string.match(text, "^%[A%] %S+%[(%d+)%]: (/.*)") {
+    if local id, command = string.match(text, "^%[A%d%] %S+%[(%d+)%]: (/.*)") {
         if color == 866792362 {
 @ifdef __GADMIN_DEBUG__
 {
@@ -159,7 +159,7 @@ method __commandRequester__::setupChatWatcher(text, color) {
     } else {
         local command, type = self.current.command.name, self.current.command.type
         if type == COMMAND_REQUEST_TYPE_NO_COMMENTARY {
-            if local id = string.match(text, "^%[A] %S+%[%d+]: (%d+), %+$") {
+            if local id = string.match(text, "^%[A%d] %S+%[%d+]: (%d+), %+$") {
                 if tonumber(id) == self.current.id.from {
                     self::remove()
                 }

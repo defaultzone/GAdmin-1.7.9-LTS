@@ -52,7 +52,7 @@ local logs = {
         { "^%[A] .*%[%d+] ответил .+%[%d+]:", -6732374 },                                       // /ans
         { "^%[A] .*%[%d+] вылечил .+%[%d+]%.$", -1347440726 },                                  // /heal
         { "^%[A] .*%[%d+] подкинул .+%[%d+]%.$", -1347440726 },                                 // /slap
-        { "^%[A] .*%[%d+]:? ", 866792362 },                                                     // /a | actions in /a
+        { "^%[A%d] .*%[%d+]:? ", 866792362 },                                                     // /a | actions in /a
         { "^%[A] .*%[%d+] взялся за обработку репорта от игрока .+%[%d+]%.$", -1347440726 },    // /grep(ort) was taked by administrator
         { "^%[A] .+%[%d+] перевёл деньги через банк .+%[%d+] %- %$%d+$", -1347440726 },         // money bank-transaction
         { "^%[A] .+%[%d+] передал деньги .+%[%d+] %- %$%d+$", -1347440726 },                    // /pay
@@ -208,8 +208,8 @@ method sampev.onServerMessage(color, text) {
         common::sendScriptMessage("Вы ввели неверный пароль в настройках для авто-ввода. Пароль был сброшен.")
     }
 
-    if string.find(text, "^%[A%] %S+%[%d+%]: %S+") && color == 866792362 {
-        local nickname, id, message = string.match(text, "^%[A%] (%S+)%[(%d+)]: (%S+)")
+    if string.find(text, "^%[A%d%] %S+%[%d+%]: %S+") && color == 866792362 {
+        local nickname, id, message = string.match(text, "^%[A%d%] (%S+)%[(%d+)]: (%S+)")
         
         if user::getAdminLvl() == 6 &&
            user::getId() == tonumber(id) &&
@@ -434,15 +434,15 @@ method sampev.onServerMessage(color, text) {
     }
 
     if config.root.additions.changeNicknameColors.use {
-        if string.find(text, "^%[A%] %S+%[%d+%]") && color == 866792362 {
+        if string.find(text, "^%[A%d%] %S+%[%d+%]") && color == 866792362 {
             math.randomseed(os.clock())
 
-            local nickname, continuation = string.match(text, "^%[A%] (%S+)(%[%d+%].*)")
+            local level, nickname, continuation = string.match(text, "^%[A(%d)%] (%S+)(%[%d+%].*)")
 
             for _, player of nicknameColors {
                 if player.nickname == nickname {
                     local color = bit.tohex(player.colors[math.random(#player.colors)], 6)
-                    text        = string.format("[A] {%s}%s{33AA33}%s", color, nickname, continuation)
+                    text        = string.format("[A%s] {%s}%s{33AA33}%s", level, color, nickname, continuation)
 
                     break
                 }
