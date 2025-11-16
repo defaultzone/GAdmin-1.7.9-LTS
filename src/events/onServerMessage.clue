@@ -442,7 +442,7 @@ method sampev.onServerMessage(color, text) {
             for _, player of nicknameColors {
                 if player.nickname == nickname {
                     local color = bit.tohex(player.colors[math.random(#player.colors)], 6)
-                    text        = string.format("[A%s] {%s}%s{33AA33}%s", level, color, nickname, continuation)
+                    text        = string.format("[A%s] {%s}%s{81C200}%s", level, color, nickname, continuation)
 
                     break
                 }
