@@ -148,7 +148,7 @@ method __commandRequester__::setupChatWatcher(text, color) {
     }
 
     if local id, command = string.match(text, "^%[A%d%] %S+%[(%d+)%]: (/.*)") {
-        if color == 866792362 {
+        if color == -2117992193 {
 @ifdef __GADMIN_DEBUG__
 {
             $debugSuccessful!("__commandRequester__::setupChatWatcher", "found request. called self::new")
