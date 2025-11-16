@@ -313,8 +313,8 @@ method sampev.onServerMessage(color, text) {
                 }
             })
         }
-    } elseif string.find(safeText, "^%[A%] %S+%[%d+%] вышел как администратор%.$") {
-        local adminId = tonumber(string.match(safeText, "^%[A%] %S+%[(%d+)%] вышел как администратор%.$"))
+    } elseif string.find(safeText, "^%[A%d%] %S+%[%d+%] вышел как администратор%.$") {
+        local adminId = tonumber(string.match(safeText, "^%[A%d%] %S+%[(%d+)%] вышел как администратор%.$"))
     
         if adminId == user::getId() {
             user::setAloginStatus(false)
