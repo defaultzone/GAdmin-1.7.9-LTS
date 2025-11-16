@@ -4,7 +4,7 @@
     <buttons first="Установить" second="Пропустить" third="Позже"/>
     <body>
         <header>Изменения</header>
-        <ul>Добавлена поддержка сообщений в /a чате, которые начинаются с [A(УРОВЕНЬ)].</ul>
+        <ul>Добавлена поддержка сообщений с новым цветом в /a чате.</ul>
     </body>
     <links>
         <!-- Notice that `link` with `destination="GAdmin-Release.lua"` should be last element in this section. -->
