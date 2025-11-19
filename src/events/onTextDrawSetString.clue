@@ -24,18 +24,19 @@ method sampev.onTextDrawSetString(id, text) {
     if string.find(text, "~y~%(%d+%)") {
         spectator.textDrawId = id
         spectator::setTo(tonumber(string.match(text, "%((%d+)%)")))
-    } elseif string.find(text, "HP") && string.find(text, "ID") {
-        spectator::setInformation({ health = string.match(text, "HP: (%d+)") })
+    } elseif string.find(text, "Ckopoc.*Android") {
+        spectator::setInformation({ health = string.match(text, "~n~.+opo.+e: (%d+)") })
     
         local result, handle = spectator::getHandle()
         if result && isCharInAnyCar(handle) {
             spectator::setInformation({ moveSpeedCurrent = string.match(text, "(%d+) / [%-]?%d+") })
         }
 
-        spectator::setInformation({ world = string.match(text, "~n~Android: .+~n~Mo.+: (%d+)$") })
+        spectator::setInformation({ world = string.match(text, "~n~Android: .+~n~Mo.+: (%d+)~n~") })
     }
 
-    if local state = string.match(text, "~n~Android: (.+)~n~") {
+    if local state = string.match(text, "~n~Android: (.+)~n~Mo") {
+        print(state)
         spectator.platform = match state {
             "\131a"  => PLATFORM_ANDROID,
             "He\166" => PLATFORM_PC,
