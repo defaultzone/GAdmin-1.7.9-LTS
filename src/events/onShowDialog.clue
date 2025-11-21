@@ -80,10 +80,13 @@ method sampev.onShowDialog(id, style, title, firstButton, secondButton, text) {
         if string.find(text, "Администрация в игре.*Лог отключений") {
             sampSendDialogResponse(id, 1, 0, nil)
             return false
-        } elseif string.find(text, "Администраторы в сети:") {
+        } elseif title == "Администрация онлайн" {
+            local text = string.gsub($, "{......}", "")
             for line with string.gmatch(text, "[^\n]+") {
-                if string.find(line, "^.*%[%d+%] %- [1-5] уровень") {
-                    local oocNickname, adminId, adminLvl = string.match(line, "^{FFFFFF}(.*)%[(%d+)%] %- ([1-5]) уровень")
+                print(u8::decode(line), string.find(line, "^.+ %([1-5] уровень%) .+%(%d+%)"))
+                if string.find(line, "^.+ %([1-5] уровень%).+%(%d+%)") {
+                    print("found")
+                    local oocNickname, adminLvl, adminId = string.match(line, "^(.+) %(([1-5]) уровень%).+%((%d+)%)")
 
                     if tonumber(adminId) == user::getId() {
                         user::setOOCNickname(oocNickname)
