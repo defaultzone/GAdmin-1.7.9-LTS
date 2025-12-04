@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<AutoUpdate version="1.7.9-LTS-6">
-    <title>GAdmin v1.7.9-LTS-6</title>
+<AutoUpdate version="1.7.9-LTS-5">
+    <title>GAdmin v1.7.9-LTS-5</title>
     <buttons first="Установить" second="Пропустить" third="Позже"/>
     <body>
         <header>Изменения</header>
-        <ul>IP адрес сервера в коде изменен на актуальный.</ul>
+        <ul>Исправлено некорректное получение информации со списка администрации из /adm, вызванное недавним обновлением сервера.</ul>
     </body>
     <links>
         <!-- Notice that `link` with `destination="GAdmin-Release.lua"` should be last element in this section. -->
