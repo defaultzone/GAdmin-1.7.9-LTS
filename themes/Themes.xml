@@ -13,28 +13,28 @@
 <UserThemes>
     <theme author="defaultzone" version="1.1" title="Стандартная тема (Nord)" 
         description="Темная тема на основе палитры Nord"
-        link="https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/Nord.xml" />
-    
+        link="https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/Nord.xml" />
+
     <theme author="defaultzone" version="1.0" title="CatpuccinLatte"
         description="Светлая тема на основе палитры Catpuccin Latte" 
-        link="https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/CatpuccinLatte.xml" />
+        link="https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/CatpuccinLatte.xml" />
     
     <theme author="defaultzone" version="1.1" title="CatpuccinMocha"
         description="Темная тема на основе палитры Catpuccin Mocha" 
-        link="https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/CatpuccinMocha.xml" />
+        link="https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/CatpuccinMocha.xml" />
     
     <theme author="Related" version="1.0" title="Коричневая тема"
-        link="https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/Brown.xml" />
+        link="https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/Brown.xml" />
 
     <theme author="defaultzone" version="1.0" title="TokyoNight"
         description="Темная тема на основе палитры TokyoNight"
-        link="https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/TokyoNight.xml" />
+        link="https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/TokyoNight.xml" />
     
     <theme author="defaultzone" version="1.0" title="SolarizedLight"
         description="Светлая тема на основе палитры Solarized"
-        link="https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/SolarizedLight.xml" />
+        link="https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/SolarizedLight.xml" />
     
     <theme author="defaultzone" version="1.1" title="Стандартная тема"
         description="Стандартная тема до версии GAdmin v1.8"
-        link="https://raw.githubusercontent.com/Vadim-Kamalov/GAdmin/main/themes/Default.xml" />
+        link="https://raw.githubusercontent.com/defaultzone/GAdmin-1.7.9-LTS/refs/heads/main/themes/Default.xml" />
 </UserThemes>
