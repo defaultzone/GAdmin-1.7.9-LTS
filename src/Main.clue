@@ -60,7 +60,7 @@
 @define DEFAULT_FOV_VALUE 70
 
 @define SERVER_NAME_TAGS_DISTANCE   20
-@define SERVER_ADDRESS              "46.174.48.194"
+@define SERVER_ADDRESS              "45.94.220.35"
 @define SERVER_MAX_PLAYERS          600
 
 @define COPYRIGHT_YEARS "2023-2025"
