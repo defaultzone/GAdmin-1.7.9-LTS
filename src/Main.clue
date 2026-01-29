@@ -44,7 +44,7 @@
 @import "game.User"      => user
 @import "game.Spectator" => spectator
 
-@define GADMIN_VERSION  "1.7.9-LTS-6"
+@define GADMIN_VERSION  "1.7.9-LTS-7"
 @define SACHESS_VERSION "1.1"
 
 @define COMMAND_DELAY       800
@@ -60,7 +60,7 @@
 @define DEFAULT_FOV_VALUE 70
 
 @define SERVER_NAME_TAGS_DISTANCE   20
-@define SERVER_ADDRESS              "45.94.220.35"
+@define SERVER_ADDRESS              "46.203.233.158"
 @define SERVER_MAX_PLAYERS          600
 
 @define COPYRIGHT_YEARS "2023-2025"
