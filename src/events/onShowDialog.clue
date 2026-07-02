@@ -112,6 +112,7 @@ method sampev.onShowDialog(id, style, title, firstButton, secondButton, text) {
 
             user::setAloginStatus(true)
             checkedAdminList = true
+            sampSendDialogResponse(id, 1, 0, "")
             
             return false
         }
