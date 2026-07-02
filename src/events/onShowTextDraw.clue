@@ -21,9 +21,7 @@
 @import "game.Spectator" => spectator
 
 method sampev.onShowTextDraw(id, data) {
-    if data.text == "Adadadad_Dfghsadersasd(111)" ||
-       data.text == "2282282~n~$400000~n~90 MP/H~n~100/20~n~M4A1/Pustinniy Orel~n~999 ms~n~127.23.42.123"
-    {
+    if data.text == "admin_player_name" || data.text == "admin_player_info" {
         return false
     }
 
