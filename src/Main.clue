@@ -467,9 +467,9 @@ global fn main() {
             local charTargeting = memory.getint8(getCharPointer(PLAYER_PED) + 0x528, false) == 19
             local shiperRifleId = 34
 
-            if isCurrentCharWeapon(PLAYER_PED, sniperRifleId) && charTargeting {
-                if !fishEyeWeaponLock {
-                    cameraSetLerpFov(70, 70, 1000, 1)
+            if (isCurrentCharWeapon(PLAYER_PED, sniperRifleId) && charTargeting && !fishEyeWeaponLock) || !user::getAloginStatus() {
+                cameraSetLerpFov(70, 70, 1000, 1)
+                if (!user::getAloginStatus()) {
                     fishEyeWeaponLock = true
                 }
             } else {
