@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<AutoUpdate version="1.7.9-LTS-8">
-    <title>GAdmin v1.7.9-LTS-8</title>
+<AutoUpdate version="1.7.9-LTS-9">
+    <title>GAdmin v1.7.9-LTS-9</title>
     <buttons first="Установить" second="Пропустить" third="Позже"/>
     <body>
         <header>Изменения</header>
-        <ul>Исправлен некорректный IP-адрес сервера в коде.</ul>
+        <ul>Рыбий глаз теперь работает только на /alogin.</ul>
+        <ul>Исправлено открытие диалога списка администрации (/adm).</ul>
+        <ul>Исправлено скрытие текстдравов в режиме наблюдения.</ul>
     </body>
     <links>
         <!-- Notice that `link` with `destination="GAdmin-Release.lua"` should be last element in this section. -->
